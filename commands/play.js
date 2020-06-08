@@ -81,10 +81,10 @@ module.exports.run = async(client, message, args, prefix, ops) => {
         }
         if(loop == "single") {
           play(client, ops, fetched);
-          /*fetched.dispatcher = fetched.connection.playStream(ytdl(fetched.queue[0].url, { filter: 'audioonly'}));
+          fetched.dispatcher = fetched.connection.playStream(ytdl(fetched.queue[0].url, { filter: 'audioonly'}));
           ops.active.set(dispatcher.guildID, fetched);
           client.channels.get(data.queue[0].announceChannel).send(`:musical_note: Now Playing: ${data.queue[0].songTitle} | Requested by ${data.queue[0].requester}`);
-          */
+          
         }
       }else{
         fetched.queue.shift()
