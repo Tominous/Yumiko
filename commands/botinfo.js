@@ -16,7 +16,7 @@ module.exports.run = (bot, message, args) => {
         const duration = moment.duration(bot.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
         const embedStats = new Discord.RichEmbed()
             .setAuthor(bot.user.username)
-            .setTitle("__**Stats:**__")
+            .setTitle("__**Statistics:**__")
             .setColor("RANDOM")
             .setDescription("Bot version is " + pkg.version)
             .setFooter(bot.config.footer, bot.user.avatarURL)
