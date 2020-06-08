@@ -78,7 +78,7 @@ exports.embed = (title, description = '', fields = [], options = {}) => {
         .setImage(options.image)
         .setTimestamp(options.timestamp ? timestampToDate(options.timestamp) : null)
 
-  //        .setFooter(randomFooter())
+          .setFooter(randomFooter())
       
       .setAuthor(options.author === undefined ? '' : options.author)
         .setThumbnail(options.thumbnail);
