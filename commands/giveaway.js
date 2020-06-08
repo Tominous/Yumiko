@@ -22,14 +22,14 @@ module.exports.run = async(client, message, args) => {
               console.log(collected.first().ment)
               
             }
-          })/*.catch(() => {
+          }).catch(() => {
             message.channel.send(`Looks like you're afk try again.`) 
-          }) */
+          }) 
           })
         }
-      })/*.catch(() => {
+      }).catch(() => {
         message.channel.send(`Looks like you're afk. Use command again.`) 
-      }) */
+      }) 
     });
   }
 }
