@@ -41,11 +41,11 @@ module.exports.run = async (client, message, args, prefix) => {
       .setDescription(desc)
       .setFooter(client.config.footer, client.user.avatarURL)
       message.channel.send(embed); 
-   /* message.channel.send(
+    message.channel.send(
       `${member.displayName} has ${
         warnings.length
       } warnings: \`\`\` ${warnings.join("\n")}\`\`\``
-    ); */
+    ); 
   });
 }
 
